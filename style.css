@@ -1,1 +1,20 @@
 /* CSS Style Sheet */
+#customizer {
+  display: flex;
+}
+
+#helmet {
+  width: 200px;
+}
+
+#options {
+  margin-left: 20px;
+}
+
+#options label {
+  font-weight: bold;
+}
+
+#options select {
+  width: 150px;
+}

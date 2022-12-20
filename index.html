@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Page Title</title>
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="main.js"></script>
+    <title>Football Helmet Customizer</title>
   </head>
   <body>
-    <h1>Design your own wallpaper!</h1>
+    <h1>Football Helmet Customizer</h1>
+    <div id="customizer">
+      <img id="helmet" src="helmet.png" alt="Football Helmet" />
+      <div id="options">
+        <h2>Options</h2>
+        <label for="color">Color:</label>
+        <select id="color">
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+        </select>
+        <br />
+        <label for="decal">Decal:</label>
+        <select id="decal">
+          <option value="star">Star</option>
+          <option value="flame">Flame</option>
+          <option value="skull">Skull</option>
+        </select>
+      </div>
+    </div>
+    <script src="customizer.js"></script>
   </body>
 </html>
