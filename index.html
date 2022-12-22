@@ -1,29 +1,61 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Football Helmet Customizer</title>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
   </head>
+  <title>Football Helmet Customizer</title>
   <body>
-    <h1>Football Helmet Customizer</h1>
     <div id="customizer">
-      <img id="helmet" src="helmet.png" alt="Football Helmet" />
-      <div id="options">
-        <h2>Options</h2>
-        <label for="color">Color:</label>
-        <select id="color">
-          <option value="red">Red</option>
-          <option value="blue">Blue</option>
-          <option value="green">Green</option>
-        </select>
-        <br />
-        <label for="decal">Decal:</label>
-        <select id="decal">
-          <option value="star">Star</option>
-          <option value="flame">Flame</option>
-          <option value="skull">Skull</option>
-        </select>
+      <div id="helmet">
+        <div id="base">
+          <div id="face-mask"></div>
+          <div id="shell"></div>
+        </div>
+        <div id="decals">
+          <div id="left-side"></div>
+          <div id="right-side"></div>
+        </div>
+      </div>
+      <div id="controls">
+        <button>
+          <img src="speedflex.webp" alt="Football helmet" id="helmet" />
+          <img
+            src="speedflex right side.jpg"
+            alt="Football helmet"
+            id="helmet"
+          />
+          <img
+            src="speedflex left side.jfif"
+            alt="Football helmet"
+            id="helmet"
+          />
+        </button>
+
+        <h2>Customize your helmet</h2>
+        <div id="color-picker">
+          <h3>Color</h3>
+          <div class="color" style="background-color: #fff"></div>
+          <div class="color" style="background-color: #000"></div>
+          <div class="color" style="background-color: #f00"></div>
+          <div class="color" style="background-color: #0f0"></div>
+          <div class="color" style="background-color: #00f"></div>
+        </div>
+        <div id="pattern-picker">
+          <h3>Pattern</h3>
+          <div class="pattern" data-pattern="solid">Solid</div>
+          <div class="pattern" data-pattern="striped">Striped</div>
+          <div class="pattern" data-pattern="dotted">Dotted</div>
+          <div class="pattern" data-pattern="checkered">Checkered</div>
+        </div>
+        <div id="decal-picker">
+          <h3>Decal</h3>
+          <img class="decal" src="eagles.png" alt="Decal 1" />
+          <img class="decal" src="panthers.png" alt="Decal 2" />
+          <img class="decal" src="raiders.webp" alt="Decal 3" />
+        </div>
       </div>
     </div>
-    <script src="customizer.js"></script>
   </body>
 </html>

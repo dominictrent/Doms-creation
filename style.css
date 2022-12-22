@@ -1,20 +1,38 @@
-/* CSS Style Sheet */
-#customizer {
-  display: flex;
-}
-
+/* Style the helmet container */
 #helmet {
+  width: 400px;
+  height: 400px;
+  border: 2px solid black;
+  margin: 0 auto;
+  position: relative;
+  background-image: url("speedflex.webp");
+  background-size: cover;
+}
+
+/* Style the left and right side of the helmet */
+#left-side,
+#right-side {
   width: 200px;
+  height: 400px;
+  position: absolute;
 }
 
-#options {
-  margin-left: 20px;
+/* Add an image to the left side of the helmet */
+#left-side {
+  left: 0;
+  background-image: url("left-side.jpg");
 }
 
-#options label {
-  font-weight: bold;
+/* Add an image to the right side of the helmet */
+#right-side {
+  right: 0;
+  background-image: url("right-side.jpg");
 }
 
-#options select {
-  width: 150px;
+/* Style the decals */
+.decal {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  background-size: cover;
 }
