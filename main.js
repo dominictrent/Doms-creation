@@ -1,39 +1,41 @@
-// JavaScript Code
-const helmet = document.getElementById("helmet");
-const base = document.getElementById("base");
-const faceMask = document.getElementById("face-mask");
-const shell = document.getElementById("shell");
-const decals = document.getElementById("decals");
-const leftSide = document.getElementById("left-side");
-const rightSide = document.getElementById("right-side");
+// Get all the options elements
+const colorOptions = document.querySelectorAll(".color-options input");
+const graphicsOptions = document.querySelectorAll(".graphics-options input");
+const visorOptions = document.querySelectorAll(".visor-options input");
+const sizeOptions = document.querySelectorAll(".size-options input");
 
-// Customization options
-const colors = ["#fff", "#000", "#f00", "#0f0", "#00f"];
-const patterns = ["solid", "striped", "dotted", "checkered"];
-const decalImages = ["image1.png", "image2.png", "image3.png"];
-const decalElement = document.getElementById("my-decal");
-decalElement.addEventListener("click", function () {
-  // Get the decal image source
-  const decal = this.src;
+// Add event listeners to the options
+colorOptions.forEach((option) =>
+  option.addEventListener("change", updatePreview)
+);
+graphicsOptions.forEach((option) =>
+  option.addEventListener("change", updatePreview)
+);
+visorOptions.forEach((option) =>
+  option.addEventListener("change", updatePreview)
+);
+sizeOptions.forEach((option) =>
+  option.addEventListener("change", updatePreview)
+);
 
-  // Update the helmet decal
-  document.getElementById("left-side").style.backgroundImage = `url(${decal})`;
-  document.getElementById("right-side").style.backgroundImage = `url(${decal})`;
-});
+// Update the preview image based on the selected options
+function updatePreview() {
+  // Get the selected options
+  const color = getSelectedOption(colorOptions);
+  const graphics = getSelectedOption(graphicsOptions);
+  const visor = getSelectedOption(visorOptions);
+  const size = getSelectedOption(sizeOptions);
 
-// Set default customization options
-let color = "#fff";
-let pattern = "solid";
-let decal = "image1.png";
+  // Update the preview image with the selected options
+  const preview = document.querySelector(".preview img");
+  preview.src = `/images/helmets/${color}-${graphics}-${visor}-${size}.png`;
+}
 
-function updateHelmet() {
-  base.style.backgroundColor = color;
-  faceMask.style.backgroundColor = color;
-  shell.style.backgroundColor = color;
-
-  if (pattern === "striped") {
-    base.style.backgroundImage = "linear-gradient(#fff, #fff)";
-    faceMask.style.backgroundImage = "linear-gradient(#fff, #fff)";
-    shell.style.backgroundImage = "linear-gradient(#fff, #fff)";
+// Get the value of the selected option in a group of options
+function getSelectedOption(options) {
+  for (let i = 0; i < options.length; i++) {
+    if (options[i].checked) {
+      return options[i].value;
+    }
   }
 }

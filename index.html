@@ -1,61 +1,75 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Page Title</title>
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="main.js"></script>
-  </head>
-  <title>Football Helmet Customizer</title>
-  <body>
-    <div id="customizer">
-      <div id="helmet">
-        <div id="base">
-          <div id="face-mask"></div>
-          <div id="shell"></div>
-        </div>
-        <div id="decals">
-          <div id="left-side"></div>
-          <div id="right-side"></div>
-        </div>
-      </div>
-      <div id="controls">
-        <button>
-          <img src="speedflex.webp" alt="Football helmet" id="helmet" />
-          <img
-            src="speedflex right side.jpg"
-            alt="Football helmet"
-            id="helmet"
-          />
-          <img
-            src="speedflex left side.jfif"
-            alt="Football helmet"
-            id="helmet"
-          />
-        </button>
-
-        <h2>Customize your helmet</h2>
-        <div id="color-picker">
-          <h3>Color</h3>
-          <div class="color" style="background-color: #fff"></div>
-          <div class="color" style="background-color: #000"></div>
-          <div class="color" style="background-color: #f00"></div>
-          <div class="color" style="background-color: #0f0"></div>
-          <div class="color" style="background-color: #00f"></div>
-        </div>
-        <div id="pattern-picker">
-          <h3>Pattern</h3>
-          <div class="pattern" data-pattern="solid">Solid</div>
-          <div class="pattern" data-pattern="striped">Striped</div>
-          <div class="pattern" data-pattern="dotted">Dotted</div>
-          <div class="pattern" data-pattern="checkered">Checkered</div>
-        </div>
-        <div id="decal-picker">
-          <h3>Decal</h3>
-          <img class="decal" src="eagles.png" alt="Decal 1" />
-          <img class="decal" src="panthers.png" alt="Decal 2" />
-          <img class="decal" src="raiders.webp" alt="Decal 3" />
-        </div>
-      </div>
+<div id="customizer">
+  <div class="section color-section">
+    <h3>Color</h3>
+    <div class="color-options">
+      <label for="color-red">
+        <input type="radio" name="color" id="color-red" value="red" />
+        Red
+      </label>
+      <label for="color-blue">
+        <input type="radio" name="color" id="color-blue" value="blue" />
+        Blue
+      </label>
     </div>
-  </body>
-</html>
+  </div>
+  <div class="section graphics-section">
+    <h3>Graphics</h3>
+    <div class="graphics-options">
+      <label for="graphics-none">
+        <input
+          type="radio"
+          name="graphics"
+          id="graphics-none"
+          value="none"
+          checked
+        />
+        None
+      </label>
+      <label for="graphics-team-logo">
+        <input
+          type="radio"
+          name="graphics"
+          id="graphics-team-logo"
+          value="team-logo"
+        />
+        Team Logo
+      </label>
+    </div>
+  </div>
+  <div class="section visor-section">
+    <h3>Visor</h3>
+    <div class="visor-options">
+      <label for="visor-yes">
+        <input type="radio" name="visor" id="visor-yes" value="yes" />
+        Yes
+      </label>
+      <label for="visor-no">
+        <input type="radio" name="visor" id="visor-no" value="no" checked />
+        No
+      </label>
+    </div>
+  </div>
+  <div class="section size-section">
+    <h3>Size</h3>
+    <div class="size-options">
+      <label for="size-small">
+        <input type="radio" name="size" id="size-small" value="small" />
+        Small
+      </label>
+      <label for="size-medium">
+        <input
+          type="radio"
+          name="size"
+          id="size-medium"
+          value="medium"
+          checked
+        />
+        Medium
+      </label>
+      <label for="size-large">
+        <input type="radio" name="size" id="size-large" value="large" />
+        Large
+      </label>
+    </div>
+  </div>
+</div>
